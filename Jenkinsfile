@@ -11,7 +11,7 @@ pipeline {
       string(name: 'runAndWaitInterval', defaultValue: '5')
       string(name: 'dependOnCdJobOutcomeCh', defaultValue: 'true')
       string(name: 'type', defaultValue: 'associate')
-      string(name: 'flowRuntimeId', defaultValue: 'fdf705c4-fc27-11ea-adcb-0242ac120002')
+      string(name: 'flowRuntimeId', defaultValue: '2432513e-fc28-11ea-9359-0242ac120002')
     }
     stages {
         stage('Build') { 
