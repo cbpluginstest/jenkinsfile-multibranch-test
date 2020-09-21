@@ -40,8 +40,9 @@ pipeline {
                 cloudBeesFlowTriggerRelease configuration: "$flowConfigName", parameters: "{'release':{'releaseName':'$flowReleaseName','stages':[{'stageName':'Stage 1','stageValue':''}],'pipelineName':'pipeline_$flowReleaseName','parameters':[{'parameterName':'procedureOutcome','parameterValue':'$procedureOutcome'},{'parameterName':'sleepTime','parameterValue':'$sleepTime'}]}}", projectName: "$flowProjectName", releaseName: "$flowReleaseName", runAndWaitOption: [checkInterval: "$runAndWaitInterval", dependOnCdJobOutcome: "$dependOnCdJobOutcomeCh"], startingStage: "Stage 1"
               }
               else if (params.type == 'associate') {
+                echo "${flowRuntimeId}"
                 cloudBeesFlowAssociateBuildToRelease configuration: "$flowConfigName", flowRuntimeId: "$flowRuntimeId", projectName: "$flowProjectName", releaseName: "$flowReleaseName"                     
-                }
+              }
             }
         }
     }
