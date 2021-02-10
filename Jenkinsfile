@@ -10,7 +10,7 @@ pipeline {
       string(name: 'flowProjectName', defaultValue: 'pvNativeJenkinsProject01')
       string(name: 'runAndWaitInterval', defaultValue: '5')
       string(name: 'dependOnCdJobOutcomeCh', defaultValue: 'true')
-      string(name: 'type', defaultValue: 'associate')
+      string(name: 'type', defaultValue: 'release')
       string(name: 'flowRuntimeId', defaultValue: '22d67d84-6ba5-11eb-afe1-0242ac120002')
     }
     stages {
